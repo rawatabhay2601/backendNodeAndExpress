@@ -12,4 +12,18 @@ const student = {
         console.log(`Hi! I'm ${this.name}`);
     }
 }
-student.greet();
+// student.greet();
+
+const c = () => {
+    const body = [];
+    body.push(10);
+    body.push(20);
+    body.push(30);
+}
+
+const d = () => {
+    console.log(body);
+}
+
+c();
+d();
