@@ -1,0 +1,18 @@
+.header{
+    color: darkslategray;
+}
+#main{
+    margin:15px;
+}
+.form-floating{
+    margin: 1rem;
+}
+body{
+    font-family: serif;
+}
+main{
+    margin:10px;
+}
+a{
+    margin: 10px;
+}
