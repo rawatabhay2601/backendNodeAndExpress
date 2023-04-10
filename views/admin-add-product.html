@@ -28,14 +28,14 @@
     </nav>
 
     <main>
-        <form action='/admin/add-product' method='POST' class="'form-check-inline">
+        <form action='/admin/add-product' method='POST' >
             <div class="form-floating">
-                <input type="text" id="text" class="form-control" placeholder="product">
+                <input type="text" id="text" class="form-control" name="product" placeholder="product">
                 <label for="text" class="form-label">Product</label>
                 
             </div>
             <div class="form-floating">
-                <input type="number" id="number" class="form-control" placeholder="quantity">
+                <input type="number" id="number" class="form-control" name="quantity" placeholder="quantity">
                 <label for="number" class="form-label">Quantity</label>
             </div>
             <button class="btn btn-dark" type='submit' style="margin:1rem">Submit</button>
