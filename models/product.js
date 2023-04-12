@@ -8,7 +8,7 @@ const p = path.join(
 );
 
 const getProductsFromFile = cb => {
-  fs.readFile(p, (fileContent,err) => {
+  fs.readFile(p, (err, fileContent) => {
     if (err) {
       cb([]);
     } else {
@@ -18,7 +18,6 @@ const getProductsFromFile = cb => {
 };
 
 module.exports = class Product {
-
   constructor(title, imageUrl, description, price) {
     this.title = title;
     this.imageUrl = imageUrl;
@@ -27,7 +26,6 @@ module.exports = class Product {
   }
 
   save() {
-    
     this.id = Math.random().toString();
     getProductsFromFile(products => {
       products.push(this);
@@ -39,5 +37,12 @@ module.exports = class Product {
 
   static fetchAll(cb) {
     getProductsFromFile(cb);
+  }
+
+  static findById(id, cb) {
+    getProductsFromFile(products => {
+      const product = products.find(p => p.id === id);
+      cb(product);
+    });
   }
 };
